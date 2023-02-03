@@ -1,0 +1,68 @@
+-convertir carpeta en repositorio
+git config --global user.name "tu nombre"
+git config --global user.email "tu email"
+
+
+git init - convierte carpeta en repo
+git status - si alguna modificacion avisa
+git log 
+git log --oneline - muestra identificado abreviado de versiones
+
+
+git clone URL
+working directory - directorio local de trabajo
+git add
+staging area - area intermedia
+git commit -m "comentario asociado al commit"
+localrepo - ya está listo para subir
+git push
+remoterepo - github
+
+--despues de primer cambio--
+ se vuelve a subir al localrepo y git status indicará que hay dos versiones
+
+profile, developer settings , personal acess tokens
+
+echo "contenido de archivo" >> readme.md
+
+--------------
+
+git show -> muestra cambios entre las 2 ultimas versiones
+git checkout codigoCommit (se obtiene de git long --oneline) -> cambiar a otra versión y investigarlo
+git checkout main -> vuelve a la principal
+git diff -> modificaciones entre versiones antes de push
+
+--------------
+
+git restore nombreFichero
+git restore --staged 
+git reset --soft HEAD~1 (conserva contenido local)
+git reset --hard HEAD~1 (se cargad todo los cambios)
+
+Si quiero restaurar lo subido ya a la versión anterior
+git push origin -f
+git rebase -i id del commit a borrar // cambiar pic por drop
+git commit --amend "comentario" sobrescribe ultimo commit
+
+git config --global -e actualizar config
+[diff]
+tool = vscode
+[difftool "vscode"]
+cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+tool= vscode
+[mergetool "vscode"]
+cmd = code --wait $MERGED
+
+git difftool nombreFichero
+
+git pull Actualiza todo desde github al directorio local
+
+https://github.com/EnriquePicasso/Repo21Oct.git
+
+***** BRANCHS / RAMAS ****
+
+git branch
+git checkout <nombreRama>
+git branch -m nombreAntigo nombreNuevo
